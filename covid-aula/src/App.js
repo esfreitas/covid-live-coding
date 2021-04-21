@@ -2,14 +2,12 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Detalhe from "./pages/Detalhe";
-import Layout from 'antd/lib/layout/layout';
+import {Layout} from 'antd';
 
 
 
 function App() {
-  return (
-
-    
+  return (   
     <Router>
 
         <Switch>
@@ -18,7 +16,7 @@ function App() {
               <Route exact path="/">
                 <Home />
               </Route>
-              <Route exact path="/:pais/:tipo">
+              <Route exact path="/:pais">
                 <Detalhe />
               </Route>
             </Layout.Content>
